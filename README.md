@@ -1,8 +1,5 @@
 # Havenwork — plain HTML/CSS/JS job portal
 
-This is a static rebuild of the original Next.js + MySQL/Drizzle job portal,
-using nothing but HTML, CSS, and vanilla JavaScript.
-
 ## Running it
 
 No build step, no npm install. Just serve the folder and open it:
