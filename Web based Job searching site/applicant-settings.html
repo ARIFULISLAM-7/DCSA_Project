@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Settings — Havenwork</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div id="site-navbar"></div>
+</header>
+
+<main class="container">
+  <div class="page-head">
+    <h1>Settings</h1>
+    <p class="muted">Keep your profile current — this is what employers see.</p>
+  </div>
+
+  <div class="layout-with-sidebar" style="margin-top:20px;">
+    <aside id="dash-sidebar"></aside>
+
+    <div>
+      <div class="panel">
+        <h3>Profile</h3>
+        <form id="profile-form">
+          <div class="field-row">
+            <div class="field">
+              <label for="p-name">Full name</label>
+              <input type="text" id="p-name" required />
+            </div>
+            <div class="field">
+              <label for="p-phone">Phone</label>
+              <input type="tel" id="p-phone" />
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="p-location">Location</label>
+              <input type="text" id="p-location" placeholder="City, State" />
+            </div>
+            <div class="field">
+              <label for="p-education">Education</label>
+              <select id="p-education">
+                <option value="none">None</option>
+                <option value="high school">High school</option>
+                <option value="undergraduate">Undergraduate</option>
+                <option value="masters">Master's</option>
+                <option value="phd">PhD</option>
+              </select>
+            </div>
+          </div>
+          <div class="field">
+            <label for="p-experience">Experience</label>
+            <input type="text" id="p-experience" placeholder="e.g. 3-5 years" />
+          </div>
+          <div class="field">
+            <label for="p-bio">Biography</label>
+            <textarea id="p-bio" placeholder="A short summary employers will see on your applications."></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Save profile</button>
+        </form>
+      </div>
+
+      <div class="panel">
+        <h3>Resumes</h3>
+        <div id="resume-list"></div>
+        <div class="field" style="margin-top:16px;">
+          <label for="resume-upload">Upload a new resume</label>
+          <input type="file" id="resume-upload" accept=".pdf,.doc,.docx" />
+          <p class="hint">Demo only — we store the file name, not its contents.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+
+<script src="js/db.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/applicant-settings.js"></script>
+</body>
+</html>

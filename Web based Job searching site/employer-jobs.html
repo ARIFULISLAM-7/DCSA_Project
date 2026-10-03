@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>My jobs — Havenwork</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div id="site-navbar"></div>
+</header>
+
+<main class="container">
+  <div class="page-head flex-between">
+    <div>
+      <h1>My jobs</h1>
+      <p class="muted">Everything you've posted, active or closed.</p>
+    </div>
+    <a href="employer-job-form.html" class="btn btn-primary">Post a job</a>
+  </div>
+
+  <div class="layout-with-sidebar" style="margin-top:20px;">
+    <aside id="dash-sidebar"></aside>
+    <div class="panel">
+      <div id="jobs-table"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+
+<script src="js/db.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/employer-jobs.js"></script>
+</body>
+</html>

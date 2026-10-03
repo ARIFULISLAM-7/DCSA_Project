@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Log in — Havenwork</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div id="site-navbar"></div>
+</header>
+
+<main>
+  <div class="form-card">
+    <h1>Welcome back</h1>
+    <p class="subtext">Log in to manage applications or your job listings.</p>
+
+    <div class="panel" style="background:var(--brand-soft); border:none; margin-bottom:20px; padding:14px 16px;">
+      <p style="margin:0; font-size:0.85rem; color:var(--brand-dark);">
+        Demo accounts — <strong>demo / password123</strong> (candidate), <strong>technova / password123</strong> (employer)
+      </p>
+    </div>
+
+    <form id="login-form">
+      <div class="field">
+        <label for="login-id">Username or email</label>
+        <input type="text" id="login-id" required autocomplete="username" />
+      </div>
+      <div class="field">
+        <label for="login-password">Password</label>
+        <input type="password" id="login-password" required autocomplete="current-password" />
+      </div>
+      <button type="submit" class="btn btn-primary btn-block">Log in</button>
+    </form>
+
+    <p class="form-foot">Don't have an account? <a href="register.html">Create one</a></p>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+
+<script src="js/db.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/auth-pages.js"></script>
+</body>
+</html>

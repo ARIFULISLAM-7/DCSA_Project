@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Post a job — Havenwork</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div id="site-navbar"></div>
+</header>
+
+<main class="container">
+  <div class="page-head">
+    <h1 id="form-title">Post a job</h1>
+    <p class="muted">Fields marked with an asterisk are required.</p>
+  </div>
+
+  <div class="layout-with-sidebar" style="margin-top:20px;">
+    <aside id="dash-sidebar"></aside>
+
+    <div class="panel">
+      <form id="job-form">
+        <div class="field">
+          <label for="j-title">Job title *</label>
+          <input type="text" id="j-title" required placeholder="e.g. Senior Frontend Engineer" />
+        </div>
+
+        <div class="field">
+          <label>Description *</label>
+          <div class="editor-toolbar">
+            <button type="button" data-cmd="bold"><b>B</b></button>
+            <button type="button" data-cmd="italic"><i>I</i></button>
+            <button type="button" data-cmd="insertUnorderedList">• List</button>
+            <button type="button" data-cmd="insertOrderedList">1. List</button>
+            <button type="button" data-cmd="formatBlock" data-value="h3">H3</button>
+            <button type="button" data-cmd="removeFormat">Clear</button>
+          </div>
+          <div class="editor-body" id="j-description" contenteditable="true" data-placeholder="Describe the role, responsibilities, and what makes it a good fit..."></div>
+          <p class="hint">A small stand-in for the Tiptap editor — bold, italics and lists via the browser's own formatting commands.</p>
+        </div>
+
+        <div class="field">
+          <label for="j-tags">Tags <span class="hint">(comma-separated)</span></label>
+          <input type="text" id="j-tags" placeholder="React, TypeScript, Remote" />
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="j-location">Location</label>
+            <input type="text" id="j-location" placeholder="City, State or Remote" />
+          </div>
+          <div class="field">
+            <label for="j-jobType">Location type</label>
+            <select id="j-jobType">
+              <option value="remote">Remote</option>
+              <option value="hybrid">Hybrid</option>
+              <option value="on-site">On-site</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="j-workType">Work type</label>
+            <select id="j-workType">
+              <option value="full-time">Full-time</option>
+              <option value="part-time">Part-time</option>
+              <option value="contract">Contract</option>
+              <option value="temporary">Temporary</option>
+              <option value="freelance">Freelance</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="j-jobLevel">Job level</label>
+            <select id="j-jobLevel">
+              <option>internship</option>
+              <option>entry level</option>
+              <option>junior</option>
+              <option selected>mid level</option>
+              <option>senior level</option>
+              <option>lead</option>
+              <option>manager</option>
+              <option>director</option>
+              <option>executive</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="j-minSalary">Minimum salary</label>
+            <input type="number" id="j-minSalary" min="0" />
+          </div>
+          <div class="field">
+            <label for="j-maxSalary">Maximum salary</label>
+            <input type="number" id="j-maxSalary" min="0" />
+          </div>
+        </div>
+
+        <div class="field-row">
+          <div class="field">
+            <label for="j-salaryCurrency">Currency</label>
+            <select id="j-salaryCurrency">
+              <option>USD</option><option>EUR</option><option>GBP</option>
+              <option>CAD</option><option>AUD</option><option>JPY</option>
+              <option>INR</option><option>NPR</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="j-salaryPeriod">Salary period</label>
+            <select id="j-salaryPeriod">
+              <option>hourly</option><option selected>yearly</option><option>monthly</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="j-experience">Experience expected</label>
+          <input type="text" id="j-experience" placeholder="e.g. 3-5 years" />
+        </div>
+
+        <div class="field">
+          <label for="j-minEducation">Minimum education</label>
+          <select id="j-minEducation">
+            <option value="none">None</option>
+            <option value="high school">High school</option>
+            <option value="undergraduate">Undergraduate</option>
+            <option value="masters">Master's</option>
+            <option value="phd">PhD</option>
+          </select>
+        </div>
+
+        <div class="checkbox-row" style="margin-bottom:22px;">
+          <input type="checkbox" id="j-featured" />
+          <label for="j-featured" style="margin:0;">Feature this listing on the homepage</label>
+        </div>
+
+        <div class="flex-between">
+          <a href="employer-jobs.html" class="btn btn-outline">Cancel</a>
+          <button type="submit" class="btn btn-primary" id="submit-btn">Publish job</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+
+<script src="js/db.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/employer-job-form.js"></script>
+</body>
+</html>

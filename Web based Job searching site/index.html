@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Havenwork — Job search, minus the noise</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div id="site-navbar"></div>
+</header>
+
+<main>
+
+  <section class="hero">
+    <div class="container">
+      <span class="eyebrow-tag" style="background:rgba(226,166,59,0.15); color:#f4d391;">Now serving 8 open roles</span>
+      <h1>Find work that fits, not just a title that matches.</h1>
+      <p class="lede">Havenwork keeps listings honest — real salary ranges, real team sizes, no mystery employers. Search by what actually matters to you.</p>
+
+      <form class="search-bar" id="hero-search-form">
+        <input type="text" id="hero-search-input" placeholder="Job title, skill, or company" autocomplete="off" />
+        <button type="submit" class="btn btn-accent">Search jobs</button>
+      </form>
+
+      <div class="hero-stats">
+        <div><strong id="stat-jobs">–</strong><span>Open roles</span></div>
+        <div><strong id="stat-companies">–</strong><span>Hiring companies</span></div>
+        <div><strong id="stat-remote">–</strong><span>Remote-friendly</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow-tag">Featured</span>
+          <h2>Roles worth a closer look</h2>
+          <p class="muted">Hand-picked by the hiring teams themselves.</p>
+        </div>
+        <a href="jobs.html" class="btn btn-outline">View all jobs</a>
+      </div>
+      <div class="job-grid" id="featured-jobs"></div>
+    </div>
+  </section>
+
+  <section class="section" style="background:var(--surface); border-top:1px solid var(--line); border-bottom:1px solid var(--line);">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="eyebrow-tag">How it works</span>
+          <h2>Built to save you the scroll</h2>
+        </div>
+      </div>
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="icon-badge">1</div>
+          <h3>Search with real filters</h3>
+          <p>Work type, seniority, salary band and location — narrow it down before you click a single listing.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-badge">2</div>
+          <h3>Apply in under a minute</h3>
+          <p>Upload a resume once, reuse it everywhere, and track every application from one dashboard.</p>
+        </div>
+        <div class="feature-card">
+          <div class="icon-badge">3</div>
+          <h3>Hire without the noise</h3>
+          <p>Employers post a role, review applicants in one queue, and manage listings without extra tools.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container" style="display:flex; justify-content:space-between; align-items:center; gap:24px; flex-wrap:wrap; background:var(--brand-dark); color:#fff; padding:40px; border-radius:12px;">
+      <div>
+        <h2 style="color:#fff;">Hiring? Post your first job in minutes.</h2>
+        <p style="color:#c9d5e4; margin:0;">Set up a company profile once, then manage every listing and applicant from one place.</p>
+      </div>
+      <a href="register.html" class="btn btn-accent">Create an employer account</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+
+<script src="js/db.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/home.js"></script>
+</body>
+</html>

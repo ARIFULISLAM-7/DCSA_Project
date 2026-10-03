@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Find jobs — Havenwork</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div id="site-navbar"></div>
+</header>
+
+<main class="container">
+  <div class="page-head">
+    <h1>Find your next role</h1>
+    <p class="muted" id="results-count"></p>
+  </div>
+
+  <form class="search-bar" id="jobs-search-form" style="max-width:none; margin:0 0 28px; box-shadow:none; border:1px solid var(--line);">
+    <input type="text" id="jobs-search-input" placeholder="Search by title, tag, or company" autocomplete="off" />
+    <button type="submit" class="btn btn-primary">Search</button>
+  </form>
+
+  <div class="layout-with-sidebar">
+    <aside>
+      <div class="panel">
+        <h3>Filters</h3>
+
+        <div class="filter-group">
+          <h4>Work type</h4>
+          <div id="filter-workType"></div>
+        </div>
+        <div class="filter-group">
+          <h4>Location type</h4>
+          <div id="filter-jobType"></div>
+        </div>
+        <div class="filter-group">
+          <h4>Job level</h4>
+          <div id="filter-jobLevel"></div>
+        </div>
+
+        <button class="btn btn-outline btn-block" id="clear-filters-btn">Clear all filters</button>
+      </div>
+    </aside>
+
+    <div>
+      <div class="job-grid" id="job-results"></div>
+      <div class="empty-state hidden" id="empty-state">
+        <h3>No jobs match those filters</h3>
+        <p>Try clearing a filter or searching a broader term.</p>
+      </div>
+      <div class="pagination" id="pagination"></div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+
+<script src="js/db.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/jobs.js"></script>
+</body>
+</html>

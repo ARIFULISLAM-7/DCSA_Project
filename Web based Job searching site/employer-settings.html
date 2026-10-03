@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Company settings — Havenwork</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div id="site-navbar"></div>
+</header>
+
+<main class="container">
+  <div class="page-head">
+    <h1>Company settings</h1>
+    <p class="muted">This shows up on every job you post.</p>
+  </div>
+
+  <div class="layout-with-sidebar" style="margin-top:20px;">
+    <aside id="dash-sidebar"></aside>
+
+    <div class="panel">
+      <form id="employer-form">
+        <div class="field">
+          <label for="e-name">Company name *</label>
+          <input type="text" id="e-name" required />
+        </div>
+        <div class="field">
+          <label for="e-description">About the company</label>
+          <textarea id="e-description" placeholder="What you do, and what makes it worth joining."></textarea>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="e-orgType">Organization type</label>
+            <input type="text" id="e-orgType" placeholder="e.g. Product company" />
+          </div>
+          <div class="field">
+            <label for="e-teamSize">Team size</label>
+            <input type="text" id="e-teamSize" placeholder="e.g. 11-50" />
+          </div>
+        </div>
+        <div class="field-row">
+          <div class="field">
+            <label for="e-year">Year established</label>
+            <input type="number" id="e-year" min="1900" max="2100" />
+          </div>
+          <div class="field">
+            <label for="e-location">Headquarters</label>
+            <input type="text" id="e-location" placeholder="City, State" />
+          </div>
+        </div>
+        <div class="field">
+          <label for="e-website">Website</label>
+          <input type="url" id="e-website" placeholder="https://" />
+        </div>
+        <button type="submit" class="btn btn-primary">Save company profile</button>
+      </form>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+
+<script src="js/db.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/employer-settings.js"></script>
+</body>
+</html>

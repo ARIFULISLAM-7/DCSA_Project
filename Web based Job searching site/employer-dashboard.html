@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Employer dashboard — Havenwork</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <div id="site-navbar"></div>
+</header>
+
+<main class="container">
+  <div class="page-head">
+    <h1 id="dash-greeting">Overview</h1>
+    <p class="muted">A quick read on your listings and applicants.</p>
+  </div>
+
+  <div class="layout-with-sidebar" style="margin-top:20px;">
+    <aside id="dash-sidebar"></aside>
+
+    <div>
+      <div class="stat-grid" id="employer-stats"></div>
+
+      <div class="panel" style="margin-top:20px;">
+        <div class="flex-between">
+          <h3>Your job listings</h3>
+          <a href="employer-jobs.html" class="muted">Manage all ›</a>
+        </div>
+        <div id="recent-jobs"></div>
+      </div>
+
+      <div class="panel">
+        <div class="flex-between">
+          <h3>Latest applicants</h3>
+          <a href="employer-applications.html" class="muted">View all ›</a>
+        </div>
+        <div id="recent-applicants"></div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer">
+  <div id="site-footer"></div>
+</footer>
+
+<script src="js/db.js"></script>
+<script src="js/ui.js"></script>
+<script src="js/employer-dashboard.js"></script>
+</body>
+</html>
